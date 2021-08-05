@@ -18,7 +18,7 @@ public class PessoaRestController {
     @Autowired
     private PessoaService service;
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "http://elotech.woloszyn.tech")
     @GetMapping("/getPessoas")
     @Transactional
     public List<Pessoa> getPessoas() throws Exception{
@@ -26,7 +26,7 @@ public class PessoaRestController {
         return clients;
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "http://elotech.woloszyn.tech")
     @GetMapping("/getPessoas/Paginate/{startPagination}/{endPagination}")
     public List<Pessoa> paginate(@PathVariable("startPagination") int strtPagination, @PathVariable("endPagination") int endPagination ) throws Exception {
         List<Pessoa> pessoas = service.paginate(strtPagination, endPagination);
@@ -40,7 +40,7 @@ public class PessoaRestController {
      * @return
      * @throws Exception
      */
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "http://elotech.woloszyn.tech")
     @PostMapping("/createPessoa")
     public ResponseEntity create(Pessoa pessoa, @RequestParam("contatos") String contatos) throws Exception {
         try {
@@ -56,7 +56,7 @@ public class PessoaRestController {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "http://elotech.woloszyn.tech")
     @PutMapping("/updatePessoa")
     public ResponseEntity update(Pessoa pessoa, @RequestParam("contatos") String contatos) throws Exception {
         try {
@@ -72,7 +72,7 @@ public class PessoaRestController {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "http://elotech.woloszyn.tech")
     @DeleteMapping("/deletePessoa/{id}")
     public ResponseEntity delete(@PathVariable("id") String id) {
         try {
