@@ -46,11 +46,11 @@ public class PessoaRestController {
         try {
             String arr = new String(Base64.getDecoder().decode(contatos));
             service.addContatoJson(pessoa, arr);
-            if(Objects.isNull(pessoa.getId()))  {
+            if(Objects.isNull(pessoa.getId()) || pessoa.getId() == 0)  {
                 Pessoa returnSavePessoa = service.save(pessoa);
                 return new ResponseEntity<Pessoa>(returnSavePessoa, HttpStatus.OK);
             }
-            return new ResponseEntity("Para criar não é necessário informar o id", HttpStatus.PERMANENT_REDIRECT);
+            return new ResponseEntity("Para criar não se deve informar o id", HttpStatus.PERMANENT_REDIRECT);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.CONFLICT);
         }
