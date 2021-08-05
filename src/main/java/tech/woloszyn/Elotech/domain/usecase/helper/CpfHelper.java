@@ -1,4 +1,4 @@
-package helper;
+package tech.woloszyn.Elotech.domain.usecase.helper;
 
 public class CpfHelper {
 

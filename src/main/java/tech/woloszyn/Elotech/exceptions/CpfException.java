@@ -1,4 +1,4 @@
-package exceptions;
+package tech.woloszyn.Elotech.exceptions;
 
 public class CpfException extends Exception {
 

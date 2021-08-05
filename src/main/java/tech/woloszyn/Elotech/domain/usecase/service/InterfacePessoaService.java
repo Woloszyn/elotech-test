@@ -1,6 +1,6 @@
-package controller.service;
+package tech.woloszyn.Elotech.domain.usecase.service;
 
-import model.Pessoa;
+import tech.woloszyn.Elotech.domain.entities.Pessoa;
 
 import java.util.List;
 import java.util.Optional;

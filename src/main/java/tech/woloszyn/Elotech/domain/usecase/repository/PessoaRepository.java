@@ -1,6 +1,6 @@
-package controller.repository;
+package tech.woloszyn.Elotech.domain.usecase.repository;
 
-import model.Pessoa;
+import tech.woloszyn.Elotech.domain.entities.Pessoa;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
